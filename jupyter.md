@@ -1,3 +1,4 @@
 # Jupyter a notebook like excel. 
 - Before starting, make sure to enter the v env using this command
 & "$HOME\jupyter-env\Scripts\Activate.ps1"
+- file extension **.ipynb**
