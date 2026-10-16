@@ -11,3 +11,4 @@
 - Ctrl-Enter run the current cell and enters command mode.
 - code run in a separated kernel, kernel can be interupted or shutdown
 - In a Jupyter Notebook, variables carry over between lines and cells automatically because they share the same interactive Python kernel (session)
+- for markdown, can have line code (kept in between a pair of $) or displayed in new line
