@@ -12,3 +12,27 @@
 - code run in a separated kernel, kernel can be interupted or shutdown
 - In a Jupyter Notebook, variables carry over between lines and cells automatically because they share the same interactive Python kernel (session)
 - for markdown, can have line code (kept in between a pair of $) or displayed in new line
+- Expressions on their own line are surrounded by \begin{equation} and \end{equation}:
+    \begin{equation}
+    e^x=\sum_{i=0}^\infty \frac{1}{i!}x^i
+    \end{equation}
+GitHub flavored markdown
+The Notebook webapp supports Github flavored markdown meaning that you can use triple backticks for code blocks:
+
+```python
+print "Hello World"
+```
+
+```javascript
+console.log("Hello World")
+```
+Gives:
+
+print "Hello World"
+console.log("Hello World")
+And a table like this:
+
+| This | is   |
+|------|------|
+|   a  | table|
+A nice HTML Table:
