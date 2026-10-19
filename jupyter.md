@@ -51,12 +51,12 @@ Use code with caution.
 2. Use the Built-in Visual Debugger
 
 If you are using JupyterLab (version 3+), there is a built-in visual debugger that allows you to set breakpoints and step through code line by line. [1] (https://jupyterlab.readthedocs.io/en/latest/user/debugger.html)
-1. Activate the Debugger: Click the bug icon 🪲 in the upper-right corner of the notebook to turn debugging on. [1] (https://jupyterlab.readthedocs.io/en/stable/user/debugger.html), [2] (https://jupyterlab.readthedocs.io/en/latest/user/debugger.html)
-2. Set Breakpoints: Click in the margin (gutter) next to the line numbers of your code cell to drop a red dot breakpoint. [1] (https://jupyterlab.readthedocs.io/en/latest/user/debugger.html)
-3. Run the Cell: Execute the cell (Shift + Enter). The execution will pause at your breakpoint. [1] (https://www.codecademy.com/article/getting-started-with-jupyter), [2] (https://jupyterlab.readthedocs.io/en/latest/user/debugger.html)
-4. Inspect State: Use the Variables panel in the right-hand debugger sidebar to view the exact data, shapes, and values at that specific step. You can step over, step into, or continue using the control buttons. [1] (https://medium.com/@heshanottawa/variable-inspector-in-jupyter-notebook-or-jupyterlab-mac-os-5639f12bbfb), [2] (https://jupyterlab.readthedocs.io/en/latest/user/debugger.html)
+   1. Activate the Debugger: Click the bug icon 🪲 in the upper-right corner of the notebook to turn debugging on. [1] (https://jupyterlab.readthedocs.io/en/stable/user/debugger.html), [2] (https://jupyterlab.readthedocs.io/en/latest/user/debugger.html)
+   2. Set Breakpoints: Click in the margin (gutter) next to the line numbers of your code cell to drop a red dot breakpoint. [1] (https://jupyterlab.readthedocs.io/en/latest/user/debugger.html)
+   3. Run the Cell: Execute the cell (Shift + Enter). The execution will pause at your breakpoint. [1] (https://www.codecademy.com/article/getting-started-with-jupyter), [2] (https://jupyterlab.readthedocs.io/en/latest/user/debugger.html)
+   4. Inspect State: Use the Variables panel in the right-hand debugger sidebar to view the exact data, shapes, and values at that specific step. You can step over, step into, or continue using the control buttons. [1] (https://medium.com/@heshanottawa/variable-inspector-in-jupyter-notebook-or-jupyterlab-mac-os-5639f12bbfb), [2] (https://jupyterlab.readthedocs.io/en/latest/user/debugger.html)
 
-3. Use Notebook Magics (%debug)
+1. Use Notebook Magics (%debug)
 
 If your code throws an error or you want a quick interactive terminal at a specific step without a GUI:
 • Post-Mortem Debugging: If a cell crashes, create a new cell immediately below it, type %debug, and run it. This opens the interactive Python Debugger (pdb) at the exact point of failure. [1] (https://www.youtube.com/watch?v=rSPyvPw0p9k&t=5), [2] (https://www.codecademy.com/article/getting-started-with-jupyter)
