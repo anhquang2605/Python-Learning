@@ -1,1 +1,2 @@
-from numby import array
+import numpy as np
+print(np.__version__)
