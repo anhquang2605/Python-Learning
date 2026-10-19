@@ -56,7 +56,7 @@ If you are using JupyterLab (version 3+), there is a built-in visual debugger th
    3. Run the Cell: Execute the cell (Shift + Enter). The execution will pause at your breakpoint. [1] (https://www.codecademy.com/article/getting-started-with-jupyter), [2] (https://jupyterlab.readthedocs.io/en/latest/user/debugger.html)
    4. Inspect State: Use the Variables panel in the right-hand debugger sidebar to view the exact data, shapes, and values at that specific step. You can step over, step into, or continue using the control buttons. [1] (https://medium.com/@heshanottawa/variable-inspector-in-jupyter-notebook-or-jupyterlab-mac-os-5639f12bbfb), [2] (https://jupyterlab.readthedocs.io/en/latest/user/debugger.html)
 
-1. Use Notebook Magics (%debug)
+3. Use Notebook Magics (%debug)
 
 If your code throws an error or you want a quick interactive terminal at a specific step without a GUI:
 • Post-Mortem Debugging: If a cell crashes, create a new cell immediately below it, type %debug, and run it. This opens the interactive Python Debugger (pdb) at the exact point of failure. [1] (https://www.youtube.com/watch?v=rSPyvPw0p9k&t=5), [2] (https://www.codecademy.com/article/getting-started-with-jupyter)
