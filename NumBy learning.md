@@ -5,6 +5,11 @@
 - numpy: new array with np.array()
 - shape: (a:b) where a is number of col and b is number of row. if only one dimesion then a, or be is omitted
 - dimension: 2d array 1d 3d etc.
+- size: number of elements
+- reshape(a,b): take a array, turn them in to 1d then reshape them into a rows, b columns
 - ndim for number of dimesions
 - np.zeros(), np.ones(), np.empty(), np.arange(n) create a array from 0 to n, np.linspace(a,b, num) a: start, b: end,  num: interval must be using the keyword argument
 - np.sort(), np.concaternate(array1, array2, axis), axis can be 0 which put array in a 2 d array instead of merging them into 1d
+- can conditionally select element from array with arr[condition]
+- ex: con = (arr <=5)
+- print(arr[con])
