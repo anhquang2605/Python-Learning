@@ -8,8 +8,10 @@
 - size: number of elements
 - reshape(a,b): take a array, turn them in to 1d then reshape them into a rows, b columns
 - ndim for number of dimesions
-- np.zeros(), np.ones(), np.empty(), np.arange(n) create a array from 0 to n, np.linspace(a,b, num) a: start, b: end,  num: interval must be using the keyword argument
+- np.zeros(), np.ones(), np.empty(), np.arange(n) create a array from 0 to n-1, np.linspace(a,b, num) a: start, b: end,  num: interval must be using the keyword argument
 - np.sort(), np.concaternate(array1, array2, axis), axis can be 0 which put array in a 2 d array instead of merging them into 1d
 - can conditionally select element from array with arr[condition]
 - ex: con = (arr <=5)
 - print(arr[con])
+- arr[:2]
+-  tuple(dim // 2 for dim in arr.shape) center coordinates of a 2 d array with rows == col the dim // 2 is floor division, round to floor
