@@ -15,3 +15,6 @@
 - print(arr[con])
 - arr[:2]
 -  tuple(dim // 2 for dim in arr.shape) center coordinates of a 2 d array with rows == col the dim // 2 is floor division, round to floor
+
+## Basic array operations
+- between arr1, and arr2, can +, -, /, *. Will match each element from the one array to another
