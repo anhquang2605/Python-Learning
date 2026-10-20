@@ -24,3 +24,5 @@
 - applied operate of every element on the array with another value
 - arr * 10 will multiply every element of arr by 10
 - can also perfom with another array as long as they are compatible (when the dimensions of both arrays are equal or when one of them is 1)
+- numpy random number operator
+- rng = np.random.default_rng()
