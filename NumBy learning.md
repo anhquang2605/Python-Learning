@@ -47,3 +47,152 @@ B is treated as: (1, 3, 5)
 3. Compare from right to left.
 4. Each pair must be equal or contain a 1.
 5. The result uses the larger size from each compatible pair.
+
+In NumPy, the @ operator performs matrix multiplication. It is different from *, which performs element-by-element multiplication.
+1. Basic example
+import numpy as npA = np.array([[1, 2],              [3, 4]])B = np.array([[5, 6],              [7, 8]])print(A @ B)
+
+
+
+Output:
+[[19 22]
+ [43 50]]
+
+
+2. How does it calculate the result?
+Matrix multiplication takes a row from A and a column from B, multiplies corresponding elements, and adds them together.
+
+
+
+A
+2
+1
+3
+4
+0
+2
+
+
+
+×
+B
+5
+2
+1
+4
+3
+7
+
+
+
+=
+AB
+20292622
+
+
+
+
+
+
+
+
+
+\(\left(AB\right)_{11}=(2\cdot 5)+(1\cdot 1)+(3\cdot 3)=20\)
+
+Row
+12
+
+
+
+
+Column
+12
+
+
+
+
+
+
+
+
+
+
+Give feedback
+
+For our example, the result is calculated like this:
+First row, first column
+\[
+1\times5+2\times7=19
+\]
+
+First row, second column
+\[
+1\times6+2\times8=22
+\]
+
+Second row, first column
+\[
+3\times5+4\times7=43
+\]
+
+Second row, second column
+\[
+3\times6+4\times8=50
+\]
+
+
+Putting those four results together gives the matrix:
+\[
+\begin{bmatrix}
+19 & 22\\
+43 & 50
+\end{bmatrix}
+\]
+
+3. Difference between @ and *
+Using the same arrays:
+print(A @ B)  # Matrix multiplicationprint(A * B)  # Element-wise multiplication
+
+
+
+The results are different:
+A @ B:
+[[19 22]
+ [43 50]]
+
+A * B:
+[[ 5 12]
+ [21 32]]
+
+
+For A * B, NumPy simply multiplies each element at the same position: \(1\times5\), \(2\times6\), and so on.
+4. Matrix dimensions must match
+For matrix multiplication, the number of columns in the first matrix must equal the number of rows in the second matrix.
+
+For example:
+A = np.ones((2, 3))  # 2 rows, 3 columnsB = np.ones((3, 4))  # 3 rows, 4 columnsC = A @ Bprint(C.shape)  # (2, 4)
+
+
+
+2 × 3
+Matrix A
+
+×
+3 × 4
+Matrix B
+
+
+The inner dimensions must match: 3 = 3.
+
+2 × 4
+Result shape: (2, 4)
+
+
+The general rule is:
+\[
+(m\times n)@(n\times p)=(m\times p)
+\]
+
+If the inner dimensions don't match, NumPy raises a ValueError.
+
+Remember: @ means matrix multiplication; * means element-wise multiplication.
