@@ -33,3 +33,17 @@ B      (1d array):  4 # trailing dimensions do not match
 
 A      (2d array):      2 x 1
 B      (3d array):  8 x 4 x 3 # second from last dimensions mismatched
+- When one shape has fewer dimensions, NumPy treats it as if it had extra dimensions of size 1 on the left.
+
+For example:
+A: (5, 3, 5)
+B:    (3, 5)
+
+B is treated as: (1, 3, 5)
+
+-When working with NumPy arrays:
+1. Write down their shapes.
+2. Add dimensions of size 1 to the left of the shorter shape until the shapes have the same number of dimensions.
+3. Compare from right to left.
+4. Each pair must be equal or contain a 1.
+5. The result uses the larger size from each compatible pair.
