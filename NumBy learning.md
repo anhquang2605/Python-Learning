@@ -27,6 +27,7 @@
 - can also perfom with another array as long as they are compatible (when the dimensions of both arrays are equal or when one of them is 1)
 - numpy random number operator
 - rng = np.random.default_rng()
+- can have a lower bound (inclusive) and higher bound (exclusive) in the rng.integers(low = a, high = b, size=(,))
 - When operating on two arrays, NumPy compares their shapes element-wise. It starts with the trailing (i.e. rightmost) dimension and works its way left. Two dimensions are compatible when **they are equal, or one of them is 1.**. To determine whether two arrays can be broadcast together, compare their shapes from right to lef
 - example of arrays with mismatched
 - A      (1d array):  3
