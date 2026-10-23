@@ -19,7 +19,8 @@
 ## Basic array operations
 - between arr1, and arr2, can +, -, /, *. Will match each element from the one array to another
 - in an array, can also operate(sum) by axis 0 for top to bottom (x axis or axis of rows) 1 for left to right (y axis, axis of cols)
-
+- axis 0: operate down the row from top to bottom
+- axis 1: operate from left to right, about the col
 ## Broadcasting
 - applied operate of every element on the array with another value
 - arr * 10 will multiply every element of arr by 10
