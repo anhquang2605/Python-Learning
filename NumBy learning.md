@@ -198,3 +198,5 @@ The general rule is:
 If the inner dimensions don't match, NumPy raises a ValueError.
 
 Remember: @ means matrix multiplication; * means element-wise multiplication.
+
+- np.diff(arr): get difference of one element after another, the first will be result in 0
