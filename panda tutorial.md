@@ -7,4 +7,6 @@
 - to select a column, use the [] with the column title in it
 - can do sth with the df or the column by using the dot notation on it
 - ex: df.describe() //basic static desciption of the data frame, df.max() get max, df.['col1'].min() get min of the column
-- import data frame from a csv file: pd.read_csv("file path")
+- import data frame from a csv file: filedata = pd.read_csv("file path")
+- to see first N rows of the file: filedata.head(N)
+- to see last N rows: filedata.tail(N)
