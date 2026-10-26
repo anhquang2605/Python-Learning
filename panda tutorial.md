@@ -24,3 +24,5 @@
 - select a specific rows with specific columns
 - df.loc[df[row] condition, df[col] condition]: this is used if interested in the rows or col titles
 - df.iloc[a:b, c:d]: this is used if intersred in the index position of rows or cols: interested in from row a+1 to b and cols c+1 to d
+- when selecting with loc or iloc, new values can be filled in based on the selection
+- when write to csv, use index=False option to remove the index from the table
