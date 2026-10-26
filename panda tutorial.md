@@ -10,3 +10,17 @@
 - import data frame from a csv file: filedata = pd.read_csv("file path")
 - to see first N rows of the file: filedata.head(N)
 - to see last N rows: filedata.tail(N)
+- to see datatypes of each series based on pandas: filedata.dtypes
+- can read and write excel sheets, but need excel reader
+- df.info() technical information like the data type, number of rows, columns
+- To select multiple columns, use a list of column names within the selection brackets []
+- .shape: return number of rows and column of the selected section of df in a form of tuple (r,l)
+- can select specific rows like numby filtering for array
+- df[df['age'] >= 35]
+- isin([a,b,c....,n]) check if rows is in the specified values in the list
+- notna(). return rows with value that is known (not na)
+- can also filter by using conditional operator 
+- df[df['col1'] sth | df['col1'] sth]
+- select a specific rows with specific columns
+- df.loc[df[row] condition, df[col] condition]: this is used if interested in the rows or col titles
+- df.iloc[a:b, c:d]: this is used if intersred in the index position of rows or cols: interested in from row a+1 to b and cols c+1 to d
