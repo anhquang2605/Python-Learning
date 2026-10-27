@@ -53,3 +53,10 @@ Axis to be sorted.
 
 * ascending bool or list of bool, default True
 Sort ascending vs. descending. Specify list for multiple sort orders. If this is a list of bools, must match the length of the by.
+
+### remove duplicate rows
+- df.drop_duplicates(): will return new data frame with on the first occurence of the row
+
+### add new col
+- insert(index position, "col_name", [colvalues,...])
+- df['new_col'] = [newvalues,...]
