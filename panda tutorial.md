@@ -30,5 +30,7 @@
 - df['new_col'] = df['old_col'] opertators (+,-,*,/,>,<,==) Values. Will perform the operation element wise with each value. Can use apply() for more sophisticated use
 
 ### rename cols 
-- df_renamed = df.rename( columns = {"old_col1": "new_col1", "old_col2" : "new_col2"}
-)
+- df_renamed = df.rename( columns = {"old_col1": "new_col1", "old_col2" : "new_col2"})
+- can be used for cols and rows titles
+- can also use functions instead of string to rename
+ex: air_quality_renamed = air_quality_renamed.rename(columns=str.lower) // rename from upper case to lower case
