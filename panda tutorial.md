@@ -34,3 +34,22 @@
 - can be used for cols and rows titles
 - can also use functions instead of string to rename
 ex: air_quality_renamed = air_quality_renamed.rename(columns=str.lower) // rename from upper case to lower case
+
+### counting values
+_ df.value_counts(): list value and their ocurrence
+
+
+### sort values
+DataFrame.sort_values(by, *, axis=0, ascending=True, inplace=<no_default>, kind='quicksort', na_position='last', ignore_index=False, key=None)
+* by str or list of str
+Name or list of names to sort by.
+
+if axis is 0 or ‘index’ then by may contain index levels and/or column labels.
+
+if axis is 1 or ‘columns’ then by may contain column levels and/or index labels.
+
+* axis“{0 or ‘index’, 1 or ‘columns’}”, default 0
+Axis to be sorted.
+
+* ascending bool or list of bool, default True
+Sort ascending vs. descending. Specify list for multiple sort orders. If this is a list of bools, must match the length of the by.
