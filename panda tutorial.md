@@ -60,3 +60,8 @@ Sort ascending vs. descending. Specify list for multiple sort orders. If this is
 ### add new col
 - insert(index position, "col_name", [colvalues,...])
 - df['new_col'] = [newvalues,...]
+- adding new cols with new values based on the condtion of the old colummn
+- np.where(condition, "value if true", "value if false")
+- or prefill the cols with one values, then use loc with condition to replace the value to meet the condition
+df['pay_rate_type'] = 'Other'
+df.loc[df['salary'] > 140000, 'pay_rate_type'] = 'High'
