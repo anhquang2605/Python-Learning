@@ -26,3 +26,9 @@
 - df.iloc[a:b, c:d]: this is used if intersred in the index position of rows or cols: interested in from row a+1 to b and cols c+1 to d
 - when selecting with loc or iloc, new values can be filled in based on the selection
 - when write to csv, use index=False option to remove the index from the table
+### New col from exisisting col
+- df['new_col'] = df['old_col'] opertators (+,-,*,/,>,<,==) Values. Will perform the operation element wise with each value. Can use apply() for more sophisticated use
+
+### rename cols 
+- df_renamed = df.rename( columns = {"old_col1": "new_col1", "old_col2" : "new_col2"}
+)
