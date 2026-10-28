@@ -65,3 +65,11 @@ Sort ascending vs. descending. Specify list for multiple sort orders. If this is
 - or prefill the cols with one values, then use loc with condition to replace the value to meet the condition
 df['pay_rate_type'] = 'Other'
 df.loc[df['salary'] > 140000, 'pay_rate_type'] = 'High'
+
+### Clean and organize data
+- isna(): detect missing values
+- dropna(): remove missing values
+- fillna(): filling missing values
+- groupby():
+- agg():
+- merge():
