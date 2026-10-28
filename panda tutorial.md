@@ -70,8 +70,39 @@ df.loc[df['salary'] > 140000, 'pay_rate_type'] = 'High'
 - isna(): detect missing values
 - dropna(): remove missing values
 - fillna(): filling missing values
-- groupby():
-- agg():
+
+**- groupby()**:
+- groupby('col') or groupby(['col1',....])
+- will return a group by object
+- group by are sorted by key, disable it to increase speed by provide option sort=False
+DataFrame groupby always operates along axis 0 (rows). To split by columns, first do a transpose:
+
+def get_letter_type(letter):
+    if letter.lower() in 'aeiou':
+        return 'vowel'
+    else:
+        return 'consonant'
+
+
+grouped = df.T.groupby(get_letter_type)
+
+df.groupby('group_column')['value_column'].aggregation()
+You can use different aggregation methods after groupby().
+Method	What it calculates
+.mean()	Average
+.sum()	Total
+.count()	Number of non-null values
+.size()	Number of rows in each group
+.min()	Minimum
+.max()	Maximum
+.median()	Median
+.std()	Standard deviation
+.nunique()	Number of unique values
+
+
+- agg(): Calculate multiple statistics with agg(), df.groupby('department')['salary'].agg(
+    ['mean', 'max', 'min', 'count']
+)
 - merge(left, right, how='inner', on=None, left_on=None, right_on=None, left_index=False, right_index=False, sort=False, suffixes=('_x', '_y'), copy=<no_default>, indicator=False, validate=None):Merge DataFrame or named Series objects with a database-style join.
 
 how{‘left’, ‘right’, ‘outer’, ‘inner’, ‘cross’, ‘left_anti’, ‘right_anti},
@@ -110,3 +141,4 @@ If specified, checks if merge is of specified type.
 “many_to_one” or “m:1”: check if merge keys are unique in right dataset.
 
 “many_to_many” or “m:m”: allowed, but does not result in checks.
+
