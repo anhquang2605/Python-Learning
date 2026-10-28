@@ -72,4 +72,30 @@ df.loc[df['salary'] > 140000, 'pay_rate_type'] = 'High'
 - fillna(): filling missing values
 - groupby():
 - agg():
-- merge():
+- merge(left, right, how='inner', on=None, left_on=None, right_on=None, left_index=False, right_index=False, sort=False, suffixes=('_x', '_y'), copy=<no_default>, indicator=False, validate=None):Merge DataFrame or named Series objects with a database-style join.
+
+how{‘left’, ‘right’, ‘outer’, ‘inner’, ‘cross’, ‘left_anti’, ‘right_anti},
+default ‘inner’ Type of merge to be performed.
+
+left: use only keys from left frame, similar to a SQL left outer join; preserve key order.
+
+right: use only keys from right frame, similar to a SQL right outer join; preserve key order.
+
+outer: use union of keys from both frames, similar to a SQL full outer join; sort keys lexicographically.
+
+inner: use intersection of keys from both frames, similar to a SQL inner join; preserve the order of the left keys.
+
+cross: creates the cartesian product from both frames, preserves the order of the left keys.
+
+left_anti: use only keys from left frame that are not in right frame, similar to SQL left anti join; preserve key order.
+
+right_anti: use only keys from right frame that are not in left frame, similar to SQL right anti join; preserve key order.
+
+onHashable or a sequence of the previous
+Column or index level names to join on. These must be found in both DataFrames. If on is None and not merging on indexes then this defaults to the intersection of the columns in both DataFrames.
+
+left_onHashable or a sequence of the previous, or array-like
+Column or index level names to join on in the left DataFrame. Can also be an array or list of arrays of the length of the left DataFrame. These arrays are treated as if they are columns.
+
+right_onHashable or a sequence of the previous, or array-like
+Column or index level names to join on in the right DataFrame. Can also be an array or list of arrays of the length of the right DataFrame. These arrays are treated as if they are columns.
