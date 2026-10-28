@@ -99,3 +99,14 @@ Column or index level names to join on in the left DataFrame. Can also be an arr
 
 right_onHashable or a sequence of the previous, or array-like
 Column or index level names to join on in the right DataFrame. Can also be an array or list of arrays of the length of the right DataFrame. These arrays are treated as if they are columns.
+
+validatestr, optional
+If specified, checks if merge is of specified type.
+
+“one_to_one” or “1:1”: check if merge keys are unique in both left and right datasets.
+
+“one_to_many” or “1:m”: check if merge keys are unique in left dataset.
+
+“many_to_one” or “m:1”: check if merge keys are unique in right dataset.
+
+“many_to_many” or “m:m”: allowed, but does not result in checks.
