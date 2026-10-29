@@ -4,3 +4,4 @@
 - scatter():
 - plot():
 - bar():
+- size of figure: To change the figure size in Matplotlib, specify the figsize parameter as a tuple of (width, height) in inches. The default size is 6.4 by 4.8 inche
