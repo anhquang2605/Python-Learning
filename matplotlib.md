@@ -35,3 +35,4 @@ df.groupby('department').agg(
     min_salary=('salary', 'min'),
     employee_count=('employee_id', 'count')
 )
+- **outlier**: datapoint that is separated from other data in the set
