@@ -142,3 +142,8 @@ If specified, checks if merge is of specified type.
 
 “many_to_many” or “m:m”: allowed, but does not result in checks.
 
+- pandas.cut(1d array or series, bins....): useful to cut a range of values into different values. create a new series or 1d array
+- when bins are [a,b,c,float('inf')]:
+  - (a,b]
+  - (b,c]
+  - (c,infinity]
