@@ -36,3 +36,32 @@ df.groupby('department').agg(
     employee_count=('employee_id', 'count')
 )
 - **outlier**: datapoint that is separated from other data in the set
+- can be indentify by using different plot:
+  - **box plot:** A box plot shows five important measurements:
+    - Minimum (excluding outliers)
+    - Q1: 25th percentile
+    - Median: 50th percentile
+    - Q3: 75th percentile
+    - Maximum (excluding outliers)
+    Individual points beyond the whiskers are potential outliers.
+  - **IQR stands for Interquartile Range.**
+    - For outlier detection, use this statistical rule:
+        \[
+        IQR = Q3 - Q1
+        \]
+
+        \[
+        Lower = Q1 - 1.5(IQR)
+        \]
+
+        \[
+        Upper = Q3 + 1.5(IQR)
+        \]
+
+    - Any value below the lower boundary or above the upper boundary is flagged as a potential outlier.
+    - Important: An outlier isn't automatically bad data. Don't delete it without investigating why it exists.
+    For AI and machine learning, outliers can significantly affect:
+    - Mean and standard deviation.
+    - Linear regression.
+    - Distance-based algorithms such as KNN and K-means.
+    - Feature scaling.
