@@ -151,3 +151,15 @@ If specified, checks if merge is of specified type.
 -**Convertion**
 - gracefully convert with **df.convert_dtypes()**
 - forcefully convert with **df.astype()**
+
+
+Handling Mixed or Dirty Data (Numeric)
+
+If your column contains dirty data (like an accidental "Missing" string inside a column of numbers), .astype(float) will crash with a ValueError. To bypass this, use pd.to_numeric() with the errors='coerce' flag, which gracefully forces invalid values into NaN.
+python
+# Invalid values become NaN, valid numbers become float64
+df['revenue'] = pd.to_numeric(df['revenue'], errors='coerce')
+
+## date time string convertion
+
+Standard conversion tools struggle with dates. Always use pd.to_datetime() to parse string timestamps into proper datetime64 objects so you can leverage time-series features.
