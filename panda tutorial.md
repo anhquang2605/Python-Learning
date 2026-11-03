@@ -147,3 +147,7 @@ If specified, checks if merge is of specified type.
   - (a,b]
   - (b,c]
   - (c,infinity]
+
+-**Convertion**
+- gracefully convert with **df.convert_dtypes()**
+- forcefully convert with **df.astype()**
