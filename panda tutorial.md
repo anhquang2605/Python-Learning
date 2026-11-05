@@ -166,4 +166,4 @@ Standard conversion tools struggle with dates. Always use pd.to_datetime() to pa
 
 ## filter and search
 # Returns a filtered DataFrame containing only matching rows
-matching_rows = df[df['your_column'].str.contains('ML', na=False)]
+matching_rows = df[df['your_column'].str.contains('ML|AI', na=False)]
