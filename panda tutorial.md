@@ -155,7 +155,7 @@ If specified, checks if merge is of specified type.
 
 Handling Mixed or Dirty Data (Numeric)
 
-If your column contains dirty data (like an accidental "Missing" string inside a column of numbers), .astype(float) will crash with a ValueError. To bypass this, use pd.to_numeric() with the errors='coerce' flag, which gracefully forces invalid values into NaN.
+If your column contains dirty data (like an accidental "Missing" string inside a column of numbers), .astype(float) will crash with a ValueError. To bypass this, use pd.to_numeric(column, option) with the errors='coerce' flag, which gracefully forces invalid values into NaN.
 python
 # Invalid values become NaN, valid numbers become float64
 df['revenue'] = pd.to_numeric(df['revenue'], errors='coerce')
