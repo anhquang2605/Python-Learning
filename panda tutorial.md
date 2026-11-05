@@ -163,3 +163,7 @@ df['revenue'] = pd.to_numeric(df['revenue'], errors='coerce')
 ## date time string convertion
 
 Standard conversion tools struggle with dates. Always use pd.to_datetime() to parse string timestamps into proper datetime64 objects so you can leverage time-series features.
+
+## filter and search
+df.filter(like='searchterm')
+df.filter(regex='regexterm')
